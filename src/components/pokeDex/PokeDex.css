@@ -1,0 +1,14 @@
+.PokeDex-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.PokeDex-winner {
+    color: forestgreen;
+}
+.PokeDex-loser{
+    color: darkred;
+}
+* {
+    box-sizing: border-box;
+}
