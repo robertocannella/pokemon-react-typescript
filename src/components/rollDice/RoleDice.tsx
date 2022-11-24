@@ -4,6 +4,8 @@ import {faDiceFive, faDiceFour, faDiceOne, faDiceSix, faDiceThree, faDiceTwo} fr
 import './RoleDice.css'
 import {Chart as ChartJS, registerables} from 'chart.js';
 import {Bar} from "react-chartjs-2";
+import {cu} from "chart.js/dist/chunks/helpers.core";
+import {cursorTo} from "readline";
 
 export default class RoleDice extends Component<any, any> {
     private chartReference = React.createRef<any>()
@@ -16,16 +18,14 @@ export default class RoleDice extends Component<any, any> {
         faDiceFive,
         faDiceSix
     ]
-    public dieOne = this.die[Math.floor(Math.random() * 6)];
-    public dieTwo = this.die[Math.floor(Math.random() * 6)];
     constructor(props: any) {
         super(props);
 
 
         this.state = {
             isRolling: false,
-            dieOne: this.dieOne,
-            dieTwo: this.dieTwo,
+            dieOne: this.die[0],
+            dieTwo: this.die[0],
             data: {
                 responsive:true,
                 maintainAspectRatio: false,
@@ -45,7 +45,7 @@ export default class RoleDice extends Component<any, any> {
         return (
 
             <div className={"RoleDice"}>
-                <h2>Role Dice Game</h2>
+                <h2>Dice Roll</h2>
                 <div className={"RoleDice__dice-container"}>
                     <Die className={"RoleDice__die"} rolling={this.state.isRolling} currentNum={this.state.dieOne}/>
                     <Die className={"RoleDice__die"} rolling={this.state.isRolling} currentNum={this.state.dieTwo}/>
@@ -76,6 +76,7 @@ export default class RoleDice extends Component<any, any> {
 
         let data = this.state.data.datasets[0].data
         data[sumOfTwoDice-2]++;
+
         this.setState(
             {
                 data: {
@@ -104,22 +105,20 @@ export default class RoleDice extends Component<any, any> {
        }, 1000)
 
     }
-    handleReset = () =>{
-        this.setState(
-            {
-                    dieOne: this.die[Math.floor(Math.random() * 6)],
-                    dieTwo: this.die[Math.floor(Math.random() * 6)],
-                    data: {
-                    responsive: true,
-                        maintainAspectRatio: false,
-                        labels: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                        datasets: [{
-                        label: 'Rolls',
-                        data: [0,0,0,0,0,0,0,0,0,0,0]
-                        }]
-                    }
+    handleReset = () => {
+        this.setState({dieOne: this.die[0], dieTwo: this.die[0] })
+        this.setState((currentState:any)=>{
+            return {
+                ...currentState,
+                data: {
+                    ...currentState.data,
+                    datasets: [{
+                        label: currentState.data.datasets[0].label,
+                        data: new Array(11).fill(0)
+                    }]
                 }
-            );
+            }
+        })
     }
 
     async rollOneHundred(){
@@ -127,9 +126,7 @@ export default class RoleDice extends Component<any, any> {
         for (let i = 0; i < 100; i++) {
             await this.timeout(2)
                 this.handleClick(false);
-
          }
-
     }
     timeout = (ms:number)=>{
         return new Promise(resolve => setTimeout(resolve, ms));
