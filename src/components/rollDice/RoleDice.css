@@ -1,0 +1,59 @@
+.RoleDice__button{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background-color: #4c86af;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.RoleDice__button:hover {
+    opacity: .9;
+}
+.RoleDice__button:disabled{
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+.RoleDice__chart-container {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .RoleDice {
+        box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+        padding-top: 5px;
+    }
+    .RoleDice__chart-container {
+        display: grid;
+        grid-template-columns: auto 99% auto;
+        padding: 10px;
+    }
+    .RoleDice__button{
+        margin-top: 1px;
+        margin-right: 5px;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+}
+@media screen and (max-width: 650px) {
+    /*.RoleDice__button-loop{*/
+    /*    display: none;*/
+    /*}*/
+}
+

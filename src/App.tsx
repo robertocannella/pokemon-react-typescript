@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import PokeGame from "./components/pokeGame/PokeGame";
+import MainPage from "./components/mainPage/MainPage";
 
 function App() {
   return (
 
     <div className="App container">
-        <PokeGame/>
+        <MainPage/>
     </div>
   );
 }

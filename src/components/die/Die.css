@@ -1,0 +1,50 @@
+.Die {
+    margin: 1rem;
+    color: #000;
+
+}
+.Die {
+
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.Die:hover {
+    transform: translateX(-3px);
+    rotate: 10deg;
+}
+
+.Die__rolling {
+    animation-name: wobble;
+    animation-duration: 1s;
+}
+
+@keyframes wobble {
+    from  {
+        transform: translate3d(0,0,0);
+    }
+    15%  {
+        transform: translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);
+    }
+    30%  {
+        transform: translate3d(20%,0,0) rotate3d(0,0,1,3deg);
+    }
+    45%  {
+        transform: translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);
+    }
+    60%  {
+        transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg);
+    }
+    75%  {
+        transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);
+    }
+
+    to  {
+         transform: translate3d(0,0,0);
+    }
+
+
+
+}

@@ -16,7 +16,7 @@ export default class PokeDex extends Component<any,any>{
     }
         return (
 
-            <div className="PokeDex PokeDex__flex-container">
+            <div className={this.props.isWinner ? 'Winner PokeDex' : 'Loser PokeDex'}>
                 {title}<p><strong>Total Points: </strong>{this.props.exp}</p>
                 <div className="PokeDex-cards PokeDex__flex-item-left">
                     {cards.map((card:IPokeCard)=> <PokeCard key={card.id} {...card}/>)}

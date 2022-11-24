@@ -1,7 +1,19 @@
+
+/*.PokeDex-cards {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(4, 1fr);*/
+/*    gap: 20px;*/
+/*}*/
+
+* {
+    box-sizing: border-box;
+}
 .PokeDex-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
 }
 .PokeDex-winner {
     color: forestgreen;
@@ -9,6 +21,35 @@
 .PokeDex-loser{
     color: darkred;
 }
-* {
-    box-sizing: border-box;
+
+@media screen and (max-width: 850px) {
+    .PokeDex {
+        box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+        padding-top: 5px;
+    }
+    .PokeDex-cards {
+
+        flex-wrap: wrap;
+
+    }
+    .PokeDex-cards > div {
+        flex: 1 45%;
+        margin: 5px;
+    }
+
+
+
+}
+@media screen and (max-width: 850px) {
+    .PokeDex-cards {
+        flex-wrap: wrap;
+
+    }
+    .PokeDex-cards > div {
+        flex: 1 45%;
+        margin: 5px;
+    }
+    .PokeDex-winner {
+
+    }
 }
