@@ -10,6 +10,7 @@ import {cursorTo} from "readline";
 export default class RoleDice extends Component<any, any> {
     private chartReference = React.createRef<any>()
     public data = [0,0,0,0,0,0,0,0,0,0,0]
+
     private die =  [
         faDiceOne,
         faDiceTwo,
@@ -41,7 +42,7 @@ export default class RoleDice extends Component<any, any> {
     }
 
     render() {
-
+        const sum = this.state.data.datasets[0].data.reduce((partialSum:number, a:number) => partialSum + a, 0);
         return (
 
             <div className={"RoleDice"}>
@@ -49,6 +50,9 @@ export default class RoleDice extends Component<any, any> {
                 <div className={"RoleDice__dice-container"}>
                     <Die className={"RoleDice__die"} rolling={this.state.isRolling} currentNum={this.state.dieOne}/>
                     <Die className={"RoleDice__die"} rolling={this.state.isRolling} currentNum={this.state.dieTwo}/>
+                </div>
+                <div>
+                    Total Rolls: {sum}
                 </div>
                 <div className={"RoleDice__button-container"}>
                     <button disabled={this.state.isRolling} className={"RoleDice__button RoleDice__button-reset"} onClick={this.handleReset}>Reset</button>
