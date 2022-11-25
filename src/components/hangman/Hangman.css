@@ -74,3 +74,14 @@ h1.winner {
     color: forestgreen;
     margin: auto;
 }
+
+@media screen and (max-width: 850px) {
+    .Hangman button {
+        width: 45px;
+    }
+
+    .Hangman-btns{
+        width: auto;
+    }
+
+}
