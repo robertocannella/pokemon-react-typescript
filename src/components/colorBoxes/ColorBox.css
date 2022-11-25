@@ -1,0 +1,6 @@
+
+.ColorBox-container  {
+    cursor: pointer;
+    width: 15%;
+    height: max(15vw);
+}

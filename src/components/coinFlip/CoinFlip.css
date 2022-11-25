@@ -1,3 +1,6 @@
 .Coin-container {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 1rem;
 }
