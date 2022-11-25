@@ -4,8 +4,7 @@ import {faDiceFive, faDiceFour, faDiceOne, faDiceSix, faDiceThree, faDiceTwo} fr
 import './RoleDice.css'
 import {Chart as ChartJS, registerables} from 'chart.js';
 import {Bar} from "react-chartjs-2";
-import {cu} from "chart.js/dist/chunks/helpers.core";
-import {cursorTo} from "readline";
+
 
 export default class RoleDice extends Component<any, any> {
     private chartReference = React.createRef<any>()
@@ -55,9 +54,9 @@ export default class RoleDice extends Component<any, any> {
                     Total Rolls: {sum}
                 </div>
                 <div className={"RoleDice__button-container"}>
-                    <button disabled={this.state.isRolling} className={"RoleDice__button RoleDice__button-reset"} onClick={this.handleReset}>Reset</button>
-                    <button disabled={this.state.isRolling} className={"RoleDice__button"} onClick={()=>this.handleClick(true)}>{this.state.isRolling? 'Rolling': 'Roll Dice'}</button>
-                    <button disabled={this.state.isRolling} className={"RoleDice__button RoleDice__button-loop"} onClick={this.rollOneHundred}>Roll 100</button>
+                    <button disabled={this.state.isRolling} className={"RoleDice__button RoleDice__button-reset Main-Button"} onClick={this.handleReset}>Reset</button>
+                    <button disabled={this.state.isRolling} className={"RoleDice__button Main-Button"} onClick={()=>this.handleClick(true)}>{this.state.isRolling? 'Rolling': 'Roll Dice'}</button>
+                    <button disabled={this.state.isRolling} className={"RoleDice__button RoleDice__button-loop Main-Button"} onClick={this.rollOneHundred}>Roll 100</button>
                 </div>
                 <div className={"RoleDice__chart-container"}>
                     <div></div>

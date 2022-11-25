@@ -1,0 +1,15 @@
+@media screen and (max-width: 850px) {
+
+    .LotteryGame__balls-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .LotteryGame__balls-container > div {
+        display: inline-block;
+        text-align: center;
+        padding: 20px;
+        margin: 15px;
+    }
+
+}

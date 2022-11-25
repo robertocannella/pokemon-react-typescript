@@ -7,6 +7,28 @@
   pointer-events: none;
 }
 
+.Main-Button {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  background-color: #4c86af;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Main-Button:hover {
+  opacity: .9;
+}
+.Main-Button:disabled{
+  cursor: not-allowed;
+  background-color: grey;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +57,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+@media screen and (max-width: 850px) {
+  .Main-Content {
+    box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .Main-Content__container {
+    display: grid;
+    grid-template-columns: auto 99% auto;
+    padding: 10px;
+
+  }
+  .Main-Button{
+
+    margin-top: 5px;
+    margin-right: 5px;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
 }

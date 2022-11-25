@@ -1,16 +1,5 @@
 .RoleDice__button{
-    margin-top: 1rem;
-    margin-right: 1rem;
-    background-color: #4c86af;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+
 }
 .RoleDice__button:hover {
     opacity: .9;

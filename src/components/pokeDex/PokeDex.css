@@ -28,17 +28,12 @@
         padding-top: 5px;
     }
     .PokeDex-cards {
-
         flex-wrap: wrap;
-
     }
     .PokeDex-cards > div {
         flex: 1 45%;
         margin: 5px;
     }
-
-
-
 }
 @media screen and (max-width: 850px) {
     .PokeDex-cards {
