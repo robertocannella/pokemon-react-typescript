@@ -75,6 +75,13 @@
     padding: 10px;
 
   }
+
+  .Main-Chart-container {
+    display: grid;
+    grid-template-columns: auto 99% auto;
+    padding: 10px;
+  }
+
   .Main-Button{
 
     margin-top: 5px;

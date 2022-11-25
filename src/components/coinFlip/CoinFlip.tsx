@@ -2,6 +2,7 @@ import React, {Component, ComponentState} from 'react';
 import { Bar } from 'react-chartjs-2';
 import Coin from "../coin/Coin";
 import {Chart as ChartJS, registerables} from 'chart.js';
+import './CoinFlip.css'
 
 interface CoinFlipState {
     currentFace: string,
@@ -118,8 +119,7 @@ class CoinFlip extends Component<ConfFlipProps,CoinFlipState> {
                     <Coin coin={this.state.currentFace} />
                 </div>
                 <button className={"Main-Button"} onClick={this.handleClick}>Flip</button>
-                <p>Out of<strong>{this.state.totalFlips}</strong> total flips, {this.state.totalHeads} were Heads
-                and {totalTails} were Tails</p>
+
                 <div className={"Main-Chart-container"}>
                     <div></div>
                     <div>
