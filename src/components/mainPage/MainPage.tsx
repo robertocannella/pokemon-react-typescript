@@ -5,6 +5,7 @@ import LotteryGame from "../lotteryGame/LotteryGame";
 import CoinFlip from "../coinFlip/CoinFlip";
 import ColorBox from "../colorBoxes/ColorBox";
 import ColorBoxes from "../colorBoxes/ColorBoxes";
+import Hangman from "../hangman/Hangman";
 
 
 export default class MainPage extends Component<any, any> {
@@ -19,6 +20,8 @@ export default class MainPage extends Component<any, any> {
         return (
             <div>
                <h1>Welcome to my React Playground</h1>
+                <Hangman/>
+                <hr />
                 <ColorBoxes/>
                 <hr/>
                 <CoinFlip />

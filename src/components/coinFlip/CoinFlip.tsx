@@ -110,9 +110,9 @@ class CoinFlip extends Component<ConfFlipProps,CoinFlipState> {
         };
         const deg = Math.floor(Math.random()*360+1);
         return (
-            <div>
+            <div className={"Main-Content"}>
                 <h1>Coin Flip</h1>
-                <div className={"Coin-container"}
+                <div className={"Coin-container "}
                      style={{
                          transform: `rotate(${deg}deg)`,
                 }}>

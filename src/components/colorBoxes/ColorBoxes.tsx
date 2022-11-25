@@ -42,7 +42,7 @@ class ColorBoxes extends Component<any, any> {
         const { palette } = this.state
         return (
             <div className={"ColorBoxes Main-Content"}>
-                <h1>Color Palette</h1>
+                <h2>Color Palette</h2>
                 <div className={"ColorBoxes-container"}>
                     {Object.keys(palette).map((key,index)=>{
                         return (
