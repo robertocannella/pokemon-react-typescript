@@ -28,6 +28,11 @@
   cursor: not-allowed;
   background-color: grey;
 }
+.Main-Chart-container {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+  padding: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

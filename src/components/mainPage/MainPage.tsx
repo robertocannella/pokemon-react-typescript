@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import RollDice from "../rollDice/RoleDice";
 import PokeGame from "../pokeGame/PokeGame";
 import LotteryGame from "../lotteryGame/LotteryGame";
+import CoinFlip from "../coinFlip/CoinFlip";
 
 
 export default class MainPage extends Component<any, any> {
@@ -17,9 +18,9 @@ export default class MainPage extends Component<any, any> {
             <div>
                <h1>Welcome to my React Playground</h1>
                 <hr/>
-                <LotteryGame />
+                <CoinFlip />
                 <hr/>
-                <LotteryGame maxNum={10} maxLottoBalls={4} title={'Mini Lotto'}/>
+                <LotteryGame maxNum={60} maxLottoBalls={6} title={'Lotto'}/>
                 <hr/>
                 <RollDice />
                 <hr/>
