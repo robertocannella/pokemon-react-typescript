@@ -88,4 +88,10 @@ table tr:last-child td:last-child {
         align-items: center;
         justify-content: center;
     }
+    .winner .neon-blue,
+    .winner .neon-orange {
+        font-size: 4rem;
+    }
+
+
 }
