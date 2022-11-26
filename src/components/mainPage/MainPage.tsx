@@ -6,6 +6,8 @@ import CoinFlip from "../coinFlip/CoinFlip";
 import ColorBox from "../colorBoxes/ColorBox";
 import ColorBoxes from "../colorBoxes/ColorBoxes";
 import Hangman from "../hangman/Hangman";
+import Board from "../lightsOut/Board";
+import BoardBackup from "../lightsOut/BoardBackup";
 
 
 export default class MainPage extends Component<any, any> {
@@ -20,6 +22,8 @@ export default class MainPage extends Component<any, any> {
         return (
             <div>
                <h1>Welcome to my React Playground</h1>
+                <Board/>
+                <hr/>
                 <Hangman/>
                 <hr />
                 <ColorBoxes/>
